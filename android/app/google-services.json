@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "781048306041",
+    "project_id": "diamondtest-42229",
+    "storage_bucket": "diamondtest-42229.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781048306041:android:6e4cb6930141327b5fb7a8",
+        "android_client_info": {
+          "package_name": "com.diamondapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc2MPTSV5310yKjeNNLwXd3_98uhSE1y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
