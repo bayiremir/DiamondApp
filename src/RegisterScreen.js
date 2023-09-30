@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button, ImageBackground, StyleSheet } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 
@@ -27,24 +27,45 @@ const RegisterScreen = ({ navigation }) => {
   };
 
   return (
-    <View>
-      <Text>Email:</Text>
-      <TextInput
-        value={email}
-        onChangeText={setEmail}
-        placeholder="Enter your email"
-      />
-      <Text>Password:</Text>
-      <TextInput
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Enter your password"
-        secureTextEntry
-      />
-      <Button title="Register" onPress={registerUser} />
-      <Button title="Go to Login" onPress={() => navigation.navigate('Login')} />
-    </View>
+    <ImageBackground source={require('./../assets/background.png')} style={styles.backgroundImage}>
+      <View style={styles.background}>
+        <TextInput
+          style={styles.input}
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Enter your email"
+        />
+        <TextInput
+          value={password}
+          style={styles.input}
+          onChangeText={setPassword}
+          placeholder="Enter your password"
+          secureTextEntry
+        />
+        <Button title="Register" onPress={registerUser} />
+        <Button title="Go to Login" onPress={() => navigation.navigate('Login')} />
+      </View>
+    </ImageBackground>
   );
 };
 
 export default RegisterScreen;
+
+const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  background: {
+    alignItems: "center",
+  },
+  input: {
+    height: 40,
+    borderColor: 'black',
+    borderWidth: 1,
+    paddingLeft: 8,
+    paddingRight: 8,
+  },
+
+});
